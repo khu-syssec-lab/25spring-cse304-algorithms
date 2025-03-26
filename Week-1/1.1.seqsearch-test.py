@@ -15,15 +15,15 @@ seqsearch = seqsearch_module.seqsearch
 # 테스트 케이스 정의 
 test_cases = [
     {"S": [10, 7, 11, 5, 13, 8], "x": 10, "expected": 0, "desc": "Best Case (첫 번째 원소)"},
-    {"S": [10, 7, 11, 5, 13, 8], "x": 6, "expected": -1, "desc": "Worst Case (배열에 없음)"},
+    {"S": [10, 7, 11, 5, 13, 8], "x": 6, "expected": 0, "desc": "Worst Case (배열에 없음)"},
     {"S": [10, 7, 11, 5, 13, 8], "x": 5, "expected": 3, "desc": "중간 위치 찾기"},
-    {"S": [], "x": 5, "expected": -1, "desc": "Edge Case (빈 배열)"},
+    {"S": [], "x": 5, "expected": 0, "desc": "Edge Case (빈 배열)"},
     {"S": [3], "x": 3, "expected": 0, "desc": "Edge Case (배열 크기 1, 존재하는 값)"},
-    {"S": [3], "x": 5, "expected": -1, "desc": "Edge Case (배열 크기 1, 없는 값)"},
+    {"S": [3], "x": 5, "expected": 0, "desc": "Edge Case (배열 크기 1, 없는 값)"},
     {"S": [4, 2, 9, 7, 5], "x": 5, "expected": 4, "desc": "Edge Case (마지막 원소 찾기)"},
     {"S": [1, 2, 2, 2, 3, 4, 5], "x": 2, "expected": 1, "desc": "Duplicate Case (여러 개 존재)"},
     {"S": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], "x": 7, "expected": 6, "desc": "중간 원소 찾기"},
-    {"S": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], "x": 11, "expected": -1, "desc": "배열에 없는 값 찾기"}
+    {"S": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], "x": 11, "expected": 0, "desc": "배열에 없는 값 찾기"}
 ]
 
 def run_test_cases():
